@@ -117,11 +117,11 @@
                             <mask key="constraints">
                                 <exclude reference="9ct-0z-DnH"/>
                                 <exclude reference="JnR-oN-dPV"/>
+                                <exclude reference="0p0-Yd-7ZI"/>
                                 <exclude reference="6tq-jc-oic"/>
                                 <exclude reference="YYG-ej-its"/>
                                 <exclude reference="jLh-8c-uDf"/>
                                 <exclude reference="mBC-lB-Pbg"/>
-                                <exclude reference="0p0-Yd-7ZI"/>
                                 <exclude reference="b0s-la-4i1"/>
                             </mask>
                         </variation>
