@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8175AB32A9B6C968E714F6E262A10F51BA5A0816",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B53953ADD2FCA00544E3FD7E585E859DDDA80B12" : 0,
+    "8175AB32A9B6C968E714F6E262A10F51BA5A0816" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8B73A29B-3552-4807-8097-F037F5D0D513",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B53953ADD2FCA00544E3FD7E585E859DDDA80B12" : "WearhausiOS",
+    "8175AB32A9B6C968E714F6E262A10F51BA5A0816" : "iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Wearhaus",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Wearhaus.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wearhaus\/adk4-ble-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8175AB32A9B6C968E714F6E262A10F51BA5A0816"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/millcode\/wearhaus-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B53953ADD2FCA00544E3FD7E585E859DDDA80B12"
+    }
+  ]
+}

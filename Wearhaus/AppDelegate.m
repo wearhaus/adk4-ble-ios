@@ -33,6 +33,8 @@
     //Avoid the compiler warning "unused variable..."...
     (void)manager;
     
+    [Fabric with:@[[Crashlytics class]]];
+    
     // Override point for customization after application launch.
     return YES;
 }
