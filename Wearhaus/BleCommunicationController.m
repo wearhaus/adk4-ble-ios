@@ -352,24 +352,24 @@ NSString * const BleCommunicationControllerDisconnected           = @"BleCommuni
         CBPeripheral* peripheral = nil;
         
         //First check; do we already know the "reconnectable UUID" to the Ble bud (last connected with matching serial number)?
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString* lastConnectedDeviceUUID = [defaults objectForKey:@"lastConnectedDeviceIdentifier"];
-        if (lastConnectedDeviceUUID != nil)
-        {
-            DDLogInfo(@"Reconnecting to already known 'last' device");
-            NSArray<CBPeripheral*> *retrievedPeripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[[[NSUUID UUID] initWithUUIDString:lastConnectedDeviceUUID]]];
-            
-            //Try first one!
-            if (retrievedPeripherals != nil && retrievedPeripherals.count > 0)
-                peripheral = [retrievedPeripherals firstObject];
-        }
-        
-        //Are there any already discovered peripherals that we should look at?
-        else if (self.discoveredPeripherals.count > 0)
-        {
-            DDLogInfo(@"There are %lu discovered peripherals that we should check", (unsigned long)self.discoveredPeripherals.count);
-            peripheral = [self dequeueDiscoveredPeripheral];
-        }
+//        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//        NSString* lastConnectedDeviceUUID = [defaults objectForKey:@"lastConnectedDeviceIdentifier"];
+//        if (lastConnectedDeviceUUID != nil)
+//        {
+//            DDLogInfo(@"Reconnecting to already known 'last' device");
+//            NSArray<CBPeripheral*> *retrievedPeripherals = [self.centralManager retrievePeripheralsWithIdentifiers:@[[[NSUUID UUID] initWithUUIDString:lastConnectedDeviceUUID]]];
+//            
+//            //Try first one!
+//            if (retrievedPeripherals != nil && retrievedPeripherals.count > 0)
+//                peripheral = [retrievedPeripherals firstObject];
+//        }
+//        
+//        //Are there any already discovered peripherals that we should look at?
+//        else if (self.discoveredPeripherals.count > 0)
+//        {
+//            DDLogInfo(@"There are %lu discovered peripherals that we should check", (unsigned long)self.discoveredPeripherals.count);
+//            peripheral = [self dequeueDiscoveredPeripheral];
+//        }
         
         //Anything?
         if (peripheral != nil)

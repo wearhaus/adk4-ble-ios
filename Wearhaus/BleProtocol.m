@@ -48,7 +48,7 @@ static const NSString* COMMENT_CHAR = @",";
 
 @property (strong, nonatomic) NSData* responsePayload;
 @property (strong, nonatomic) NSException* exception;
-@property (strong) dispatch_semaphore_t responseBlockingSemaphore;
+@property (assign, nonatomic) dispatch_semaphore_t responseBlockingSemaphore;
 
 - (void)commonParseDataBuffer:(NSMutableData*)buffer;
 
@@ -427,20 +427,20 @@ static const NSString* COMMENT_CHAR = @",";
                                                       userInfo:userInfo];
     
     DDLogInfo(@"Grab semaphore to block the current thread execution UNTIL we either timeout, OR get signalled by a successfully received response");
-    if (dispatch_semaphore_wait(self.responseBlockingSemaphore, timeout) != 0)
-    {
-        //Opps -- timed out!
-        DDLogInfo(@"Inquiry of command %@ timeout", command);
-        
-        //Indicate timeout...
-        self.state = BleProtocolStateTimeout;
-        self.exception = [[NSException alloc] initWithName:@"TimeoutException" reason:@"Ble failed to respond in time" userInfo:nil];
-    }
-    else
-    {
-        //Successfully received the semaphore (wait is over!)
-        DDLogInfo(@"Inquiry of command %@ successfully processed (semaphore awaited without timeout)", command);
-    }
+//    if (dispatch_semaphore_wait(self.responseBlockingSemaphore, timeout) != 0)
+//    {
+//        //Opps -- timed out!
+//        DDLogInfo(@"Inquiry of command %@ timeout", command);
+//        
+//        //Indicate timeout...
+//        self.state = BleProtocolStateTimeout;
+//        self.exception = [[NSException alloc] initWithName:@"TimeoutException" reason:@"Ble failed to respond in time" userInfo:nil];
+//    }
+//    else
+//    {
+//        //Successfully received the semaphore (wait is over!)
+//        DDLogInfo(@"Inquiry of command %@ successfully processed (semaphore awaited without timeout)", command);
+//    }
     
     DDLogInfo(@"Wait is over -- proceed!");
     
